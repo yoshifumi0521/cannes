@@ -1,0 +1,40 @@
+---
+propel:
+  _attributes:
+    package: lib.model
+  civer:
+    _attributes:
+      idMethod: native
+    id:
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    title:
+      type: VARCHAR
+      size: 100
+    client:
+      type: VARCHAR
+      size: 100
+    agency:
+      type: VARCHAR
+      size: 100
+    url:
+      type: LONGVARCHAR
+    summary:
+      type: VARCHAR
+      size: 255
+    body:
+      type: LONGVARCHAR
+    impression:
+      type: LONGVARCHAR
+    memo:
+      type: LONGVARCHAR
+    display:
+      type: integer
+      default: 1
+    created_at:
+      type: TIMESTAMP
+    updated_at:
+      type: TIMESTAMP
+
