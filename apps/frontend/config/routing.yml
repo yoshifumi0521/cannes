@@ -7,7 +7,9 @@ film_list:
   url:   /film/list
   param: { module: film, action: list }
 
-
+press_list:
+  url:   /press/list
+  param: { module: press, action: list }
 
 
 # default rules

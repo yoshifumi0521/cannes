@@ -16,17 +16,17 @@ div {
 </style>
 
 <div class="page-header">
-  <h2>CYBER</h2>
-  <?php echo link_to ('Add+', 'cyber/create') ?>
+  <h2>PRESS</h2>
+  <?php echo link_to ('Add+', 'press/create') ?>
 </div>
 
-<?php if(!$cybers): ?>
+<?php if(!$presses): ?>
 
     <p>まだ何も登録していません。</p>
 
 <?php else: ?>
 
-    <?php foreach ($cybers as $key => $cyber): ?>
+    <?php foreach ($presses as $key => $press): ?>
         <?php if($key % 3 == 0): ?>
             <div class="row-fluid">
                 <ul class="thumbnails">
@@ -34,18 +34,18 @@ div {
 
             <li class="span4 item">
                 <div class="thumbnail">
-                    <?php echo $cyber->getImageTag('s','a',array('width'=>'260px','height'=>'150px')); ?>
+                    <?php echo $press->getImageTag('s','a',array('width'=>'260px','height'=>'150px')); ?>
                     <div class="caption">
-                        <h3><?php echo $cyber->__toString(); ?></h3>
+                        <h3><?php echo $press->__toString(); ?></h3>
                         <p>
-                            <?php echo mb_truncate_text($cyber->getSummary(),"48"); ?>
+                            <?php echo mb_truncate_text($press->getSummary(),"48"); ?>
                         </p>
                     </div>
                     <div class="widget-footer">
                         <p>
                             &nbsp;
                             <!-- <a href="product.html" class="btn">Read more</a> -->
-                            <?php echo link_to("Read more","cyber/show?id=".$cyber->getId()); ?>
+                            <?php echo link_to("Read more","press/show?id=".$press->getId()); ?>
                         </p>
                     </div>
                 </div>

@@ -41,7 +41,10 @@
                         <li>
                             <?php echo link_to("FILM","@film_list"); ?>
                         </li>
-                        <li><a href="faq.html">PRESS</a></li>
+                        <li>
+                            <?php echo link_to("PRESS","@press_list"); ?>
+                        </li>
+
                     <!-- <li><a href="contact_us.html">Contact us</a></li> -->
                     <!-- <li><a href="signup.html">Sign up</a></li>
                     <li><a href="signin.html">Sign in</a></li> -->

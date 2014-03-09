@@ -5,40 +5,53 @@
 ?>
 
 <div class="page-header">
-    <h2><?php echo $cyber->getTitle() ?></h2>
-    <?php echo link_to('編集', 'cyber/edit?id='.$cyber->getId()) ?>
-    &nbsp;<?php echo link_to('CYBERのTOP', 'cyber/list') ?>
+    <h2><?php echo $press->getTitle() ?></h2>
+    <?php echo link_to('編集', 'press/edit?id='.$press->getId()) ?>
+    &nbsp;<?php echo link_to('PRESSのTOP', '@press_list') ?>
 </div>
 
 <div>
 
-    <div class="row-fluid">
-        <div class="span6">
-            <?php echo $cyber->getImageTag('l','a'); ?>
+    <?php if($press->getImageTag('l','a')): ?>
+        <div class="row-fluid">
+            <div class="span4">
+                <?php echo $press->getImageTag('l','a'); ?>
+            </div>
         </div>
-        <div class="span6">
-            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="460" height="250" align="middle">
-                <param name="allowScriptAccess" value="sameDomain" />
-                <param name="movie" value="/uploads/cyber/swf/swf_<?php echo $cyber->getId(); ?>a.swf" />
-                <param name="quality" value="autolow" />
-                <embed src="/uploads/cyber/swf/swf_<?php echo $cyber->getId(); ?>a.swf" quality="autolow" width="460" height="250" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-            </object>
-        </div>
-    </div>
+        <br><br>
+    <?php endif; ?>
 
-    <br><br>
+    <?php if($press->getImageTag('l','b')): ?>
+        <div class="row-fluid">
+            <div class="span4">
+                <?php echo $press->getImageTag('l','b'); ?>
+            </div>
+        </div>
+        <br><br>
+    <?php endif; ?>
+
+    <?php if($press->getImageTag('l','c')): ?>
+        <div class="row-fluid">
+            <div class="span4">
+                <?php echo $press->getImageTag('l','c'); ?>
+            </div>
+        </div>
+        <br><br>
+    <?php endif; ?>
+
+
     <div class="row-fluid">
         <h3>概要</h3>
-        <p><?php echo autoLinker($cyber->getSummary()) ?></p>
+        <p><?php echo autoLinker($press->getSummary()) ?></p>
 
         <h3>内容</h3>
-        <p><?php echo autoLinker($cyber->getBody()) ?></p>
+        <p><?php echo autoLinker($press->getBody()) ?></p>
 
         <h3>感想</h3>
-        <p><?php echo autoLinker($cyber->getImpression()) ?></p>
+        <p><?php echo autoLinker($press->getImpression()) ?></p>
 
         <h3>メモ</h3>
-        <p><?php echo autoLinker($cyber->getImpression()) ?></p>
+        <p><?php echo autoLinker($press->getImpression()) ?></p>
 
     </div>
 
@@ -48,19 +61,19 @@
             <tbody>
                 <tr>
                     <th>Title: </th>
-                    <td><?php echo $cyber->getTitle() ?></td>
+                    <td><?php echo $press->getTitle() ?></td>
                 </tr>
                 <tr>
                     <th>Client: </th>
-                    <td><?php echo $cyber->getClient() ?></td>
+                    <td><?php echo $press->getClient() ?></td>
                 </tr>
                 <tr>
                     <th>Agency: </th>
-                    <td><?php echo $cyber->getAgency() ?></td>
+                    <td><?php echo $press->getAgency() ?></td>
                 </tr>
                 <tr>
                     <th>Url: </th>
-                    <td><?php link_to($cyber->getUrl(),$cyber->getUrl(),array("target"=>"_blank")) ?></td>
+                    <td><?php link_to($press->getUrl(),$press->getUrl(),array("target"=>"_blank")) ?></td>
                 </tr>
             </tbody>
         </table>
