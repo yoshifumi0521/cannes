@@ -8,10 +8,6 @@
 
 ?>
 
-<div class="page-header">
-  <h2>CYBERの作品追加</h2>
-</div>
-
 <?php echo form_tag('cyber/update',array('id'=>'form','enctype' => 'multipart/form-data')) ?>
 
 <?php echo object_input_hidden_tag($cyber, 'getId') ?>

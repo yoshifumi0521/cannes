@@ -3,6 +3,10 @@ cyber_list:
   url:   /cyber/list
   param: { module: cyber, action: list }
 
+film_list:
+  url:   /film/list
+  param: { module: film, action: list }
+
 
 
 

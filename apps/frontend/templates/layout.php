@@ -38,7 +38,9 @@
                         <li>
                             <?php echo link_to("CYBER","@cyber_list"); ?>
                         </li>
-                        <li><a href="faq.html">FILM</a></li>
+                        <li>
+                            <?php echo link_to("FILM","@film_list"); ?>
+                        </li>
                         <li><a href="faq.html">PRESS</a></li>
                     <!-- <li><a href="contact_us.html">Contact us</a></li> -->
                     <!-- <li><a href="signup.html">Sign up</a></li>
