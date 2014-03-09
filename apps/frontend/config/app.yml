@@ -1,13 +1,13 @@
 # default values
 all:
-    image:
-        size:
-          s:
-            x: 260
-            y: 150
-          m:
-            x: 360
-            y: 200
-          l:
-            x: 460
-            y: 250
+  image:
+    size:
+      s:
+        x: 260
+        y: 150
+      m:
+        x: 660
+        y: 350
+      l:
+        x: 1060
+        y: 550

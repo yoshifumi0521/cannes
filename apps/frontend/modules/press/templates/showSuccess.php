@@ -14,7 +14,7 @@
 
     <?php if($press->getImageTag('l','a')): ?>
         <div class="row-fluid">
-            <div class="span4">
+            <div class="span12">
                 <?php echo $press->getImageTag('l','a'); ?>
             </div>
         </div>
@@ -23,7 +23,7 @@
 
     <?php if($press->getImageTag('l','b')): ?>
         <div class="row-fluid">
-            <div class="span4">
+            <div class="span12">
                 <?php echo $press->getImageTag('l','b'); ?>
             </div>
         </div>
@@ -32,7 +32,7 @@
 
     <?php if($press->getImageTag('l','c')): ?>
         <div class="row-fluid">
-            <div class="span4">
+            <div class="span12">
                 <?php echo $press->getImageTag('l','c'); ?>
             </div>
         </div>
