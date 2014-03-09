@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/30349/plugins/sfRedisPlugin/trunk/test/fixtures/project/config
+END
+redis.yml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/30349/plugins/sfRedisPlugin/trunk/test/fixtures/project/config/redis.yml
+END
+ProjectConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/28828/plugins/sfRedisPlugin/trunk/test/fixtures/project/config/ProjectConfiguration.class.php
+END

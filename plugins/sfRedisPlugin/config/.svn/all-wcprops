@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/30349/plugins/sfRedisPlugin/trunk/config
+END
+factories.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/28812/plugins/sfRedisPlugin/trunk/config/factories.yml.sample
+END
+sfRedisPluginConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/30349/plugins/sfRedisPlugin/trunk/config/sfRedisPluginConfiguration.class.php
+END
+redis.yml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/28812/plugins/sfRedisPlugin/trunk/config/redis.yml
+END

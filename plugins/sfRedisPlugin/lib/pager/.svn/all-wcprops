@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/33389/plugins/sfRedisPlugin/trunk/lib/pager
+END
+sfRedisListPager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/30522/plugins/sfRedisPlugin/trunk/lib/pager/sfRedisListPager.class.php
+END
+sfRedisZsetDoctrinePager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/33389/plugins/sfRedisPlugin/trunk/lib/pager/sfRedisZsetDoctrinePager.class.php
+END
+sfRedisZsetPager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/33136/plugins/sfRedisPlugin/trunk/lib/pager/sfRedisZsetPager.class.php
+END

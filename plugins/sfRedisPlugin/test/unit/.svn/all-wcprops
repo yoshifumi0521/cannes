@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/30522/plugins/sfRedisPlugin/trunk/test/unit
+END
+sfRedisListPagerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/30522/plugins/sfRedisPlugin/trunk/test/unit/sfRedisListPagerTest.php
+END
+sfRedisCacheTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/28828/plugins/sfRedisPlugin/trunk/test/unit/sfRedisCacheTest.php
+END
+sfRedisZsetPagerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/30522/plugins/sfRedisPlugin/trunk/test/unit/sfRedisZsetPagerTest.php
+END

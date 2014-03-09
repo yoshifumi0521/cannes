@@ -14,14 +14,16 @@
  */
 class civerActions extends sfActions
 {
-  public function executeIndex()
-  {
-    return $this->forward('civer', 'list');
-  }
+  // public function executeIndex()
+  // {
+  //   return $this->forward('civer', 'list');
+  // }
 
   public function executeList()
   {
     $this->civers = CiverPeer::doSelect(new Criteria());
+
+
   }
 
   public function executeShow()
@@ -64,11 +66,72 @@ class civerActions extends sfActions
     $civer->setBody($this->getRequestParameter('body'));
     $civer->setImpression($this->getRequestParameter('impression'));
     $civer->setMemo($this->getRequestParameter('memo'));
-    $civer->setDisplay($this->getRequestParameter('display'));
-
+    //displayを1にする。
+    $civer->setDisplay(1);
+    //保存する。
     $civer->save();
 
+    //イメージ画像をいれる。
+    $alphabet = str_split('abcde');
+    $image_json = $civer->getImage()?json_decode($civer->getImage(),true): array();
+    $yml_image_size = sfConfig::get('app_image_size');
+    foreach ( $alphabet as $key1 => $value1)
+    {
+      $image_name = 'image_'.$civer->getId().$value1;
+      if($this->getRequest()->getFilePath('image_'.$value1))
+      {
+        foreach ($yml_image_size as $key2 => $value2)
+        {
+          $image = new sfThumbnail($value2['x'],$value2['y']);
+          $image->loadFile($this->getRequest()->getFilePath('image_'.$value1));
+          $image->save(sfConfig::get('sf_upload_dir').'/civer/'.$key2.'/'.$image_name.'.jpg', 'image/jpeg');
+        }
+        $image_json['image_'.$value1] = $image_name;
+      }
+    }
+    $civer->setImage(json_encode($image_json));
+
+    //SWFファイルを保存する。
+    $swf_json = $civer->getSwfFile()?json_decode($civer->getSwfFile(),true): array();
+    if($this->getRequest()->getFilePath('swf'))
+    {
+      $swf_name = 'swf_'.$civer->getId()."a";
+      $this->getRequest()->moveFile('swf', sfConfig::get('sf_upload_dir').'/civer/swf/'.$swf_name.".swf");
+      $swf_json["swf"] = $swf_name;
+    }
+    $civer->setSwfFile(json_encode($swf_json));
+    $civer->save();
+
+
     return $this->redirect('civer/show?id='.$civer->getId());
+  }
+
+  //updateがエラーのとき
+  public function handleErrorUpdate()
+  {
+    // if (!$this->getRequestParameter('id'))
+    // {
+    //   $civer = new Civer();
+    // }
+    // else
+    // {
+    //   $civer = CiverPeer::retrieveByPk($this->getRequestParameter('id'));
+    //   $this->forward404Unless($civer);
+    // }
+    // $civer = new Civer();
+    // // $civer->setId($this->getRequestParameter('id'));
+    // $civer->setTitle($this->getRequestParameter('title'));
+    // $civer->setClient($this->getRequestParameter('client'));
+    // $civer->setAgency($this->getRequestParameter('agency'));
+    // $civer->setUrl($this->getRequestParameter('url'));
+    // $civer->setSummary($this->getRequestParameter('summary'));
+    // $civer->setBody($this->getRequestParameter('body'));
+    // $civer->setImpression($this->getRequestParameter('impression'));
+    // $civer->setMemo($this->getRequestParameter('memo'));
+
+
+    // $this->setTemplate('edit');
+    // return sfView::SUCCESS;
   }
 
   public function executeDelete()

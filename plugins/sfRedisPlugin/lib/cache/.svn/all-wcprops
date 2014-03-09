@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/33254/plugins/sfRedisPlugin/trunk/lib/cache
+END
+sfMemcachedRedisCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/33254/plugins/sfRedisPlugin/trunk/lib/cache/sfMemcachedRedisCache.class.php
+END
+sfRedisCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/33133/plugins/sfRedisPlugin/trunk/lib/cache/sfRedisCache.class.php
+END

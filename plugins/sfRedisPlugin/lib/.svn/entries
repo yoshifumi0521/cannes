@@ -1,0 +1,80 @@
+10
+
+dir
+33649
+http://svn.symfony-project.com/plugins/sfRedisPlugin/trunk/lib
+http://svn.symfony-project.com
+
+
+
+2012-03-17T10:01:14.877070Z
+33389
+bicou
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ee427ae8-e902-0410-961c-c3ed070cd9f9
+
+task
+dir
+
+cache
+dir
+
+config
+dir
+
+predis
+dir
+
+Doctrine
+dir
+
+sfRedis.class.php
+file
+
+
+
+
+2013-08-13T14:55:36.000000Z
+6a4e4af7d3569078d2137432477f412e
+2010-03-26T19:47:10.850020Z
+28813
+bicou
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1127
+
+pager
+dir
+

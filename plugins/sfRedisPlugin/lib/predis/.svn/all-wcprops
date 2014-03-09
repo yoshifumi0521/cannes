@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/33132/plugins/sfRedisPlugin/trunk/lib/predis
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/28812/plugins/sfRedisPlugin/trunk/lib/predis/LICENSE
+END
+Predis.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/33132/plugins/sfRedisPlugin/trunk/lib/predis/Predis.php
+END
