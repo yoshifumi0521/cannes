@@ -51,7 +51,7 @@
         <p><?php echo autoLinker($press->getImpression()) ?></p>
 
         <h3>メモ</h3>
-        <p><?php echo autoLinker($press->getImpression()) ?></p>
+        <p><?php echo autoLinker($press->getMemo()) ?></p>
 
     </div>
 

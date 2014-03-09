@@ -38,7 +38,7 @@
         <p><?php echo autoLinker($cyber->getImpression()) ?></p>
 
         <h3>メモ</h3>
-        <p><?php echo autoLinker($cyber->getImpression()) ?></p>
+        <p><?php echo autoLinker($cyber->getMemo()) ?></p>
 
     </div>
 

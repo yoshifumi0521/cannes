@@ -45,7 +45,7 @@
         <p><?php echo autoLinker($film->getImpression()) ?></p>
 
         <h3>メモ</h3>
-        <p><?php echo autoLinker($film->getImpression()) ?></p>
+        <p><?php echo autoLinker($film->getMemo()) ?></p>
 
     </div>
 
