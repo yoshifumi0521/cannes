@@ -73,7 +73,7 @@
                 </tr>
                 <tr>
                     <th>Url: </th>
-                    <td><?php link_to($press->getUrl(),$press->getUrl(),array("target"=>"_blank")) ?></td>
+                    <td><?php echo link_to($press->getUrl(),$press->getUrl(),array("target"=>"_blank")) ?></td>
                 </tr>
             </tbody>
         </table>

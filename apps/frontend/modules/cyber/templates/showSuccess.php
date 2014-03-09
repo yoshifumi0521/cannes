@@ -60,7 +60,7 @@
                 </tr>
                 <tr>
                     <th>Url: </th>
-                    <td><?php link_to($cyber->getUrl(),$cyber->getUrl(),array("target"=>"_blank")) ?></td>
+                    <td><?php echo link_to($cyber->getUrl(),$cyber->getUrl(),array("target"=>"_blank")) ?></td>
                 </tr>
             </tbody>
         </table>
