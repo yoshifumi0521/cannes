@@ -1,7 +1,15 @@
+
+cyber_list:
+  url:   /cyber/list
+  param: { module: cyber, action: list }
+
+
+
+
 # default rules
 homepage:
   url:   /
-  param: { module: civer, action: list }
+  param: { module: cyber, action: list }
 
 default_symfony:
   url:   /symfony/:action/*

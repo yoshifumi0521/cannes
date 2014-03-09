@@ -25,9 +25,7 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a href="index.html" class="brand brand-bootbus">
-                    チュパカブラのヤングカンヌ研究室
-                </a>
+                <?php echo link_to("チュパカブラのヤングカンヌ研究室","@cyber_list",array("class"=> "brand brand-bootbus")); ?>
                 <!-- Below button used for responsive navigation -->
                 <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                   <span class="icon-bar"></span>
@@ -37,7 +35,9 @@
                 <!-- Start: Primary navigation -->
                 <div class="nav-collapse collapse">
                     <ul class="nav pull-left">
-                        <li><a href="faq.html">CIVER</a></li>
+                        <li>
+                            <?php echo link_to("CYBER","@cyber_list"); ?>
+                        </li>
                         <li><a href="faq.html">FILM</a></li>
                         <li><a href="faq.html">PRESS</a></li>
                     <!-- <li><a href="contact_us.html">Contact us</a></li> -->

@@ -12,98 +12,93 @@
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 3335 2007-01-23 16:19:56Z fabien $
  */
-class civerActions extends sfActions
+class cyberActions extends sfActions
 {
-  // public function executeIndex()
-  // {
-  //   return $this->forward('civer', 'list');
-  // }
-
   public function executeList()
   {
-    $this->civers = CiverPeer::doSelect(new Criteria());
-
+    $this->cybers = CyberPeer::doSelect(new Criteria());
 
   }
 
   public function executeShow()
   {
-    $this->civer = CiverPeer::retrieveByPk($this->getRequestParameter('id'));
-    $this->forward404Unless($this->civer);
+    $this->cyber = CyberPeer::retrieveByPk($this->getRequestParameter('id'));
+    // $this->forward404Unless($this->cyber);
   }
 
   public function executeCreate()
   {
-    $this->civer = new Civer();
+    $this->cyber = new Cyber();
 
     $this->setTemplate('edit');
   }
 
   public function executeEdit()
   {
-    $this->civer = CiverPeer::retrieveByPk($this->getRequestParameter('id'));
-    $this->forward404Unless($this->civer);
+    $this->cyber = CyberPeer::retrieveByPk($this->getRequestParameter('id'));
+    $this->forward404Unless($this->cyber);
   }
 
   public function executeUpdate()
   {
     if (!$this->getRequestParameter('id'))
     {
-      $civer = new Civer();
+      $cyber = new Cyber();
     }
     else
     {
-      $civer = CiverPeer::retrieveByPk($this->getRequestParameter('id'));
-      $this->forward404Unless($civer);
+      $cyber = CyberPeer::retrieveByPk($this->getRequestParameter('id'));
+      $this->forward404Unless($cyber);
     }
 
-    $civer->setId($this->getRequestParameter('id'));
-    $civer->setTitle($this->getRequestParameter('title'));
-    $civer->setClient($this->getRequestParameter('client'));
-    $civer->setAgency($this->getRequestParameter('agency'));
-    $civer->setUrl($this->getRequestParameter('url'));
-    $civer->setSummary($this->getRequestParameter('summary'));
-    $civer->setBody($this->getRequestParameter('body'));
-    $civer->setImpression($this->getRequestParameter('impression'));
-    $civer->setMemo($this->getRequestParameter('memo'));
+    $cyber->setId($this->getRequestParameter('id'));
+    $cyber->setTitle($this->getRequestParameter('title'));
+    $cyber->setClient($this->getRequestParameter('client'));
+    $cyber->setAgency($this->getRequestParameter('agency'));
+    $cyber->setPrize($this->getRequestParameter('prize'));
+    $cyber->setUrl($this->getRequestParameter('url'));
+    $cyber->setSummary($this->getRequestParameter('summary'));
+    $cyber->setBody($this->getRequestParameter('body'));
+    $cyber->setImpression($this->getRequestParameter('impression'));
+    $cyber->setMemo($this->getRequestParameter('memo'));
     //displayを1にする。
-    $civer->setDisplay(1);
+    $cyber->setDisplay(1);
     //保存する。
-    $civer->save();
+    $cyber->save();
 
     //イメージ画像をいれる。
     $alphabet = str_split('abcde');
-    $image_json = $civer->getImage()?json_decode($civer->getImage(),true): array();
+    $image_json = $cyber->getImage()?json_decode($cyber->getImage(),true): array();
     $yml_image_size = sfConfig::get('app_image_size');
     foreach ( $alphabet as $key1 => $value1)
     {
-      $image_name = 'image_'.$civer->getId().$value1;
+      $image_name = 'image_'.$cyber->getId().$value1;
       if($this->getRequest()->getFilePath('image_'.$value1))
       {
         foreach ($yml_image_size as $key2 => $value2)
         {
           $image = new sfThumbnail($value2['x'],$value2['y']);
           $image->loadFile($this->getRequest()->getFilePath('image_'.$value1));
-          $image->save(sfConfig::get('sf_upload_dir').'/civer/'.$key2.'/'.$image_name.'.jpg', 'image/jpeg');
+          $image->save(sfConfig::get('sf_upload_dir').'/cyber/'.$key2.'/'.$image_name.'.jpg', 'image/jpeg');
         }
         $image_json['image_'.$value1] = $image_name;
       }
     }
-    $civer->setImage(json_encode($image_json));
+    $cyber->setImage(json_encode($image_json));
 
     //SWFファイルを保存する。
-    $swf_json = $civer->getSwfFile()?json_decode($civer->getSwfFile(),true): array();
+    $swf_json = $cyber->getSwfFile()?json_decode($cyber->getSwfFile(),true): array();
     if($this->getRequest()->getFilePath('swf'))
     {
-      $swf_name = 'swf_'.$civer->getId()."a";
-      $this->getRequest()->moveFile('swf', sfConfig::get('sf_upload_dir').'/civer/swf/'.$swf_name.".swf");
+      $swf_name = 'swf_'.$cyber->getId()."a";
+      $this->getRequest()->moveFile('swf', sfConfig::get('sf_upload_dir').'/cyber/swf/'.$swf_name.".swf");
       $swf_json["swf"] = $swf_name;
     }
-    $civer->setSwfFile(json_encode($swf_json));
-    $civer->save();
+    $cyber->setSwfFile(json_encode($swf_json));
+    $cyber->save();
 
 
-    return $this->redirect('civer/show?id='.$civer->getId());
+    return $this->redirect('cyber/show?id='.$cyber->getId());
   }
 
   //updateがエラーのとき
@@ -136,12 +131,12 @@ class civerActions extends sfActions
 
   public function executeDelete()
   {
-    $civer = CiverPeer::retrieveByPk($this->getRequestParameter('id'));
+    $cyber = CyberPeer::retrieveByPk($this->getRequestParameter('id'));
 
-    $this->forward404Unless($civer);
+    $this->forward404Unless($cyber);
 
-    $civer->delete();
+    $cyber->delete();
 
-    return $this->redirect('civer/list');
+    return $this->redirect('@cyber_list');
   }
 }

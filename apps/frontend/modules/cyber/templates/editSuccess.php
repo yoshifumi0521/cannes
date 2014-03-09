@@ -8,16 +8,16 @@
 
 ?>
 
-<?php echo form_tag('civer/update',array('id'=>'form','enctype' => 'multipart/form-data')) ?>
+<?php echo form_tag('cyber/update',array('id'=>'form','enctype' => 'multipart/form-data')) ?>
 
-<?php echo object_input_hidden_tag($civer, 'getId') ?>
+<?php echo object_input_hidden_tag($cyber, 'getId') ?>
 
 <table>
   <tbody>
     <tr>
       <th>タイトル:</th>
       <td>
-        <?php echo object_input_tag($civer, 'getTitle', array (
+        <?php echo object_input_tag($cyber, 'getTitle', array (
           'size' => 200,
           'class'=>'span6',
         )) ?>
@@ -28,7 +28,7 @@
     <tr>
       <th>クライアント:</th>
       <td>
-        <?php echo object_input_tag($civer, 'getClient', array (
+        <?php echo object_input_tag($cyber, 'getClient', array (
           'size' => 200,
           'class'=>'span6'
         )) ?>
@@ -37,7 +37,7 @@
     <tr>
       <th>代理店:</th>
       <td>
-        <?php echo object_input_tag($civer, 'getAgency', array (
+        <?php echo object_input_tag($cyber, 'getAgency', array (
           'size' => 200,
           'class'=>'span6'
         )) ?>
@@ -46,7 +46,7 @@
     <tr>
       <th>受賞:</th>
       <td>
-        <?php echo object_input_tag($civer, 'getPrize', array (
+        <?php echo object_input_tag($cyber, 'getPrize', array (
           'size' => 200,
           'class'=>'span6'
         )) ?>
@@ -55,7 +55,7 @@
     <tr>
       <th>Url:</th>
       <td>
-        <?php echo object_input_tag($civer, 'getUrl', array (
+        <?php echo object_input_tag($cyber, 'getUrl', array (
           'size' => '200x10',
           'class'=>'span6',
         )) ?>
@@ -78,7 +78,7 @@
     <tr>
       <th>概要:</th>
       <td>
-        <?php echo object_input_tag($civer, 'getSummary', array (
+        <?php echo object_input_tag($cyber, 'getSummary', array (
           'size' => 200,
           'class'=>'span6'
         )) ?>
@@ -88,7 +88,7 @@
     <tr>
       <th>内容:</th>
       <td>
-        <?php echo object_textarea_tag($civer, 'getBody', array (
+        <?php echo object_textarea_tag($cyber, 'getBody', array (
           'size' => '200x5',
           'class'=>'span6',
         )) ?>
@@ -97,7 +97,7 @@
     <tr>
       <th>感想:</th>
       <td>
-        <?php echo object_textarea_tag($civer, 'getImpression', array (
+        <?php echo object_textarea_tag($cyber, 'getImpression', array (
           'size' => '200x10',
           'class'=>'span6',
         )) ?>
@@ -107,18 +107,12 @@
     <tr>
       <th>メモ:</th>
       <td>
-        <?php echo object_textarea_tag($civer, 'getMemo', array (
+        <?php echo object_textarea_tag($cyber, 'getMemo', array (
           'size' => '202x10',
           'class'=>'span6',
         )) ?>
       </td>
     </tr>
-    <!-- <tr>
-      <th>Display:</th>
-      <td><?php echo object_input_tag($civer, 'getDisplay', array (
-      'size' => 7,
-    )) ?></td>
-    </tr> -->
 
 
 
@@ -127,11 +121,11 @@
 <hr />
   <?php echo submit_tag('保存する') ?>
 
-  <?php if ($civer->getId()): ?>
-    &nbsp;<?php echo link_to('削除', 'civer/delete?id='.$civer->getId(), 'post=true&confirm=Are you sure?') ?>
-    &nbsp;<?php echo link_to('キャンセル', 'civer/show?id='.$civer->getId()) ?>
+  <?php if ($cyber->getId()): ?>
+    &nbsp;<?php echo link_to('削除', 'cyber/delete?id='.$cyber->getId(), 'post=true&confirm=Are you sure?') ?>
+    &nbsp;<?php echo link_to('キャンセル', 'cyber/show?id='.$cyber->getId()) ?>
   <?php else: ?>
-    &nbsp;<?php echo link_to('キャンセル', 'civer/list') ?>
+    &nbsp;<?php echo link_to('キャンセル', 'cyber/list') ?>
   <?php endif; ?>
 </form>
 

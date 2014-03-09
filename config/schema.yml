@@ -2,7 +2,7 @@
 propel:
   _attributes:
     package: lib.model
-  civer:
+  cyber:
     _attributes:
       idMethod: native
     id:
