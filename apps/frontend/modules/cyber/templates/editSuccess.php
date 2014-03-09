@@ -143,12 +143,12 @@
         impression: {
           required: true
         },
-        image_a: {
-          required: true
-        },
-        swf: {
-          required: true
-        }
+        // image_a: {
+        //   required: true
+        // },
+        // swf: {
+        //   required: true
+        // }
       },
       messages: {
         // 'job_type_codes[]': {

@@ -134,9 +134,8 @@ class cyberActions extends sfActions
     $cyber = CyberPeer::retrieveByPk($this->getRequestParameter('id'));
 
     $this->forward404Unless($cyber);
-
-    $cyber->delete();
-
+    $cyber->setDisplay(0);
+    $cyber->save();
     return $this->redirect('@cyber_list');
   }
 }
