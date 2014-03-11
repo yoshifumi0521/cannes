@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bootbusiness | Short description about company">
     <meta name="author" content="Your name">
-    <title>チュパカブラのヤングカンヌ研究室</title>
+    <title>チュパカブラのカンヌ研究室</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <!-- Bootstrap -->
     <?php use_stylesheet('bootstrap.min.css') ?>
@@ -25,7 +25,7 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <?php echo link_to("チュパカブラのヤングカンヌ研究室","@cyber_list",array("class"=> "brand brand-bootbus")); ?>
+                <?php echo link_to("チュパカブラのカンヌ研究室","@cyber_list",array("class"=> "brand brand-bootbus")); ?>
                 <!-- Below button used for responsive navigation -->
                 <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                   <span class="icon-bar"></span>
