@@ -6,6 +6,10 @@
   use_javascript('validate.js');
   use_javascript('messages.js');
 
+  if(SF_DEBUG){
+    return;
+  }
+
 ?>
 
 <div class="page-header">

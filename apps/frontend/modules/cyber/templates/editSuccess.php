@@ -6,11 +6,17 @@
   use_javascript('validate.js');
   use_javascript('messages.js');
 
+  if(!SF_DEBUG)
+  {
+    return;
+  }
+
 ?>
 
 <div class="page-header">
   <h2>CYBERの作品追加</h2>
 </div>
+
 
 <?php echo form_tag('cyber/update',array('id'=>'form','enctype' => 'multipart/form-data')) ?>
 

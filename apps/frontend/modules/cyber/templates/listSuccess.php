@@ -3,7 +3,6 @@
 // date: 2014/03/08 06:29:38
     use_helper('MbText');
     // use_javascript('lineup.js');
-
 ?>
 
 <style>
@@ -17,7 +16,9 @@ div {
 
 <div class="page-header">
   <h2>CYBER</h2>
-  <?php echo link_to ('Add+', 'cyber/create') ?>
+  <?php if(SF_DEBUG): ?>
+    <?php echo link_to ('Add+', 'cyber/create') ?>
+  <?php endif; ?>
 </div>
 
 <?php if(!$cybers): ?>

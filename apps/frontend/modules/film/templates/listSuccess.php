@@ -17,7 +17,9 @@ div {
 
 <div class="page-header">
   <h2>FILM</h2>
-  <?php echo link_to ('Add+', 'film/create') ?>
+  <?php if(SF_DEBUG): ?>
+    <?php echo link_to ('Add+', 'film/create') ?>
+  <?php endif; ?>
 </div>
 
 <?php if(!$films): ?>
