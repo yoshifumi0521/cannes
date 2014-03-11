@@ -22,7 +22,7 @@ class pressActions extends sfActions
 
   public function executeShow()
   {
-    $this->press = PressPeer::retrieveByPk($this->getRequestParameter('id'));
+    $this->press = PressPeer::retrieveByPk($this->getRequestParameter('press_id'));
     $this->forward404Unless($this->press);
   }
 

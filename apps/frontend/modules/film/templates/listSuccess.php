@@ -47,7 +47,7 @@ div {
                         <p>
                             &nbsp;
                             <!-- <a href="product.html" class="btn">Read more</a> -->
-                            <?php echo link_to("Read more","film/show?id=".$film->getId()); ?>
+                            <?php echo link_to("Read more","@film?film_id=".$film->getId()); ?>
                         </p>
                     </div>
                 </div>

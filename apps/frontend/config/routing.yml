@@ -3,13 +3,25 @@ cyber_list:
   url:   /cyber/list
   param: { module: cyber, action: list }
 
+cyber:
+  url:   /cyber/:cyber_id
+  param: { module: cyber, action: show }
+
 film_list:
   url:   /film/list
   param: { module: film, action: list }
 
+film:
+  url:   /film/:film_id
+  param: { module: film, action: show }
+
 press_list:
   url:   /press/list
   param: { module: press, action: list }
+
+press:
+  url:   /press/:press_id
+  param: { module: press, action: show }
 
 
 # default rules

@@ -22,7 +22,7 @@ class cyberActions extends sfActions
 
   public function executeShow()
   {
-    $this->cyber = CyberPeer::retrieveByPk($this->getRequestParameter('id'));
+    $this->cyber = CyberPeer::retrieveByPk($this->getRequestParameter('cyber_id'));
     // $this->forward404Unless($this->cyber);
   }
 

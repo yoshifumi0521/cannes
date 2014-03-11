@@ -22,7 +22,7 @@ class filmActions extends sfActions
 
   public function executeShow()
   {
-    $this->film = FilmPeer::retrieveByPk($this->getRequestParameter('id'));
+    $this->film = FilmPeer::retrieveByPk($this->getRequestParameter('film_id'));
     $this->forward404Unless($this->film);
   }
 

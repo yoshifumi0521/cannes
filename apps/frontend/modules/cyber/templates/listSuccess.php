@@ -46,7 +46,7 @@ div {
                         <p>
                             &nbsp;
                             <!-- <a href="product.html" class="btn">Read more</a> -->
-                            <?php echo link_to("Read more","cyber/show?id=".$cyber->getId()); ?>
+                            <?php echo link_to("Read more","@cyber?cyber_id=".$cyber->getId()); ?>
                         </p>
                     </div>
                 </div>

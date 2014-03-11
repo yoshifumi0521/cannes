@@ -47,7 +47,7 @@ div {
                         <p>
                             &nbsp;
                             <!-- <a href="product.html" class="btn">Read more</a> -->
-                            <?php echo link_to("Read more","press/show?id=".$press->getId()); ?>
+                            <?php echo link_to("Read more","@press?press_id=".$press->getId()); ?>
                         </p>
                     </div>
                 </div>
