@@ -17,7 +17,7 @@ div {
 <div class="page-header">
   <h2>CYBER</h2>
   <?php if(SF_DEBUG): ?>
-    <?php echo link_to ('Add+', 'cyber/create') ?>
+    <?php echo link_to ('Add+', '@create_cyber') ?>
   <?php endif; ?>
 </div>
 

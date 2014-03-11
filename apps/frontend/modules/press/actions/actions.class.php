@@ -89,7 +89,7 @@ class pressActions extends sfActions
     $press->setImage(json_encode($image_json));
     $press->save();
 
-    return $this->redirect('press/show?id='.$press->getId());
+    return $this->redirect('@press?press_id='.$press->getId());
   }
 
   //updateがエラーのとき

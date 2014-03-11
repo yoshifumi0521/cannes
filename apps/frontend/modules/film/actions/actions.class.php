@@ -89,7 +89,7 @@ class filmActions extends sfActions
     $film->setImage(json_encode($image_json));
     $film->save();
 
-    return $this->redirect('film/show?id='.$film->getId());
+    return $this->redirect('@film?film_id='.$film->getId());
   }
 
   //updateがエラーのとき

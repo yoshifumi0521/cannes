@@ -98,7 +98,7 @@ class cyberActions extends sfActions
     $cyber->save();
 
 
-    return $this->redirect('cyber/show?id='.$cyber->getId());
+    return $this->redirect('@cyber?cyber_id='.$cyber->getId());
   }
 
   //updateがエラーのとき

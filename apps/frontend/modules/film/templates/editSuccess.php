@@ -6,7 +6,7 @@
   use_javascript('validate.js');
   use_javascript('messages.js');
 
-  if(SF_DEBUG){
+  if(!SF_DEBUG){
     return;
   }
 
@@ -16,7 +16,7 @@
   <h2>FILMの作品追加</h2>
 </div>
 
-<?php echo form_tag('film/update',array('id'=>'form','enctype' => 'multipart/form-data')) ?>
+<?php echo form_tag('@update_film',array('id'=>'form','enctype' => 'multipart/form-data')) ?>
 
 <?php echo object_input_hidden_tag($film, 'getId') ?>
 

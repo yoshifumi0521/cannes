@@ -15,11 +15,11 @@
 <div>
 
     <div class="row-fluid">
-        <div class="span4">
+        <!-- <div class="span4">
             <?php echo $cyber->getImageTag('m','a'); ?>
-        </div>
-        <div class="span8">
-            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="800" height="600" align="middle">
+        </div> -->
+        <div class="span12">
+            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="1000" height="800" align="middle">
                 <param name="allowScriptAccess" value="sameDomain" />
                 <param name="movie" value="/uploads/cyber/swf/swf_<?php echo $cyber->getId(); ?>a.swf" />
                 <param name="quality" value="autolow" />

@@ -18,7 +18,7 @@ div {
 <div class="page-header">
   <h2>PRESS</h2>
   <?php if(SF_DEBUG): ?>
-    <?php echo link_to ('Add+', 'press/create') ?>
+    <?php echo link_to ('Add+', '@create_press') ?>
   <?php endif; ?>
 </div>
 

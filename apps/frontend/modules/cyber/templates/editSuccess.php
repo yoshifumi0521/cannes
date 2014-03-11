@@ -18,7 +18,7 @@
 </div>
 
 
-<?php echo form_tag('cyber/update',array('id'=>'form','enctype' => 'multipart/form-data')) ?>
+<?php echo form_tag('@update_cyber',array('id'=>'form','enctype' => 'multipart/form-data')) ?>
 
 <?php echo object_input_hidden_tag($cyber, 'getId') ?>
 
