@@ -6,7 +6,9 @@
 
 <div class="page-header">
     <h2><?php echo $cyber->getTitle() ?></h2>
-    <?php echo link_to('編集', 'cyber/edit?id='.$cyber->getId()) ?>
+    <?php if(SF_DEBUG): ?>
+        <?php echo link_to('編集', 'cyber/edit?id='.$cyber->getId()) ?>
+    <?php endif; ?>
     &nbsp;<?php echo link_to('CYBERのTOP', 'cyber/list') ?>
 </div>
 

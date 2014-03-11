@@ -6,7 +6,9 @@
 
 <div class="page-header">
     <h2><?php echo $film->getTitle() ?></h2>
-    <?php echo link_to('編集', 'film/edit?id='.$film->getId()) ?>
+    <?php if(SF_DEBUG): ?>
+        <?php echo link_to('編集', 'film/edit?id='.$film->getId()) ?>
+    <?php endif; ?>
     &nbsp;<?php echo link_to('FILMのTOP', '@film_list') ?>
 </div>
 

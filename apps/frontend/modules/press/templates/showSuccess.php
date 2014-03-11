@@ -6,7 +6,9 @@
 
 <div class="page-header">
     <h2><?php echo $press->getTitle() ?></h2>
-    <?php echo link_to('編集', 'press/edit?id='.$press->getId()) ?>
+    <?php if(SF_DEBUG): ?>
+        <?php echo link_to('編集', 'press/edit?id='.$press->getId()) ?>
+    <?php endif; ?>
     &nbsp;<?php echo link_to('PRESSのTOP', '@press_list') ?>
 </div>
 
