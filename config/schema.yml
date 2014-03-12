@@ -1,140 +1,170 @@
 ---
-propel:
-  _attributes:
+propel: 
+  _attributes: 
     package: lib.model
-  cyber:
-    _attributes:
+  cyber: 
+    _attributes: 
       idMethod: native
-    id:
+    id: 
       type: INTEGER
       required: true
       autoIncrement: true
       primaryKey: true
-    title:
+    title: 
       type: VARCHAR
       size: 100
-    client:
+    client: 
       type: VARCHAR
       size: 100
-    agency:
+    agency: 
       type: VARCHAR
       size: 100
-    prize:
+    prize: 
       type: VARCHAR
       size: 100
-    url:
-      type: LONGVARCHAR
-    image:
+    prize_type: 
+      type: INTEGER
+    prize_year: 
+      type: INTEGER
+    prize_detail: 
+      type: VARCHAR
+      size: 100
+    tag: 
       type: VARCHAR
       size: 255
-    swf_file:
+    url: 
+      type: LONGVARCHAR
+    image: 
       type: VARCHAR
       size: 255
-    summary:
+    swf_file: 
       type: VARCHAR
       size: 255
-    body:
+    summary: 
+      type: VARCHAR
+      size: 255
+    body: 
       type: LONGVARCHAR
-    impression:
+    impression: 
       type: LONGVARCHAR
-    memo:
+    memo: 
       type: LONGVARCHAR
-    display:
+    display: 
       type: INTEGER
       default: 1
-    created_at:
+    created_at: 
       type: TIMESTAMP
-    updated_at:
+    updated_at: 
       type: TIMESTAMP
-  film:
-    _attributes:
+  film: 
+    _attributes: 
       idMethod: native
-    id:
+    id: 
       type: INTEGER
       required: true
       autoIncrement: true
       primaryKey: true
-    title:
+    title: 
       type: VARCHAR
       size: 100
-    client:
+    client: 
       type: VARCHAR
       size: 100
-    agency:
+    agency: 
       type: VARCHAR
       size: 100
-    url:
+    url: 
       type: LONGVARCHAR
-    prize:
+    prize: 
       type: VARCHAR
       size: 100
-    image:
+    prize_type: 
+      type: INTEGER
+    prize_year: 
+      type: INTEGER
+    prize_detail: 
+      type: VARCHAR
+      size: 100
+    tag: 
       type: VARCHAR
       size: 255
-    youtube_link:
+    image: 
       type: VARCHAR
       size: 255
-    youtube_tag:
-      type: LONGVARCHAR
-    summary:
+    youtube_link: 
       type: VARCHAR
       size: 255
-    body:
+    youtube_tag: 
       type: LONGVARCHAR
-    impression:
+    summary: 
+      type: VARCHAR
+      size: 255
+    body: 
       type: LONGVARCHAR
-    memo:
+    impression: 
       type: LONGVARCHAR
-    display:
+    memo: 
+      type: LONGVARCHAR
+    display: 
       type: INTEGER
       default: 1
-    created_at:
+    created_at: 
       type: TIMESTAMP
-    updated_at:
+    updated_at: 
       type: TIMESTAMP
-  press:
-    _attributes:
+  press: 
+    _attributes: 
       idMethod: native
-    id:
+    id: 
       type: INTEGER
       required: true
       autoIncrement: true
       primaryKey: true
-    title:
+    title: 
       type: VARCHAR
       size: 100
-    client:
+    client: 
       type: VARCHAR
       size: 100
-    agency:
+    agency: 
       type: VARCHAR
       size: 100
-    prize:
+    prize: 
       type: VARCHAR
       size: 100
-    url:
-      type: LONGVARCHAR
-    image:
+    prize_type: 
+      type: INTEGER
+    prize_year: 
+      type: INTEGER
+    prize_detail: 
+      type: VARCHAR
+      size: 100
+    tag: 
       type: VARCHAR
       size: 255
-    youtube_link:
+    url: 
+      type: LONGVARCHAR
+    image: 
       type: VARCHAR
       size: 255
-    youtube_tag:
-      type: LONGVARCHAR
-    summary:
+    youtube_link: 
       type: VARCHAR
       size: 255
-    body:
+    youtube_tag: 
       type: LONGVARCHAR
-    impression:
+    summary: 
+      type: VARCHAR
+      size: 255
+    body: 
       type: LONGVARCHAR
-    memo:
+    impression: 
       type: LONGVARCHAR
-    display:
+    memo: 
+      type: LONGVARCHAR
+    display: 
       type: INTEGER
       default: 1
-    created_at:
+    created_at: 
       type: TIMESTAMP
-    updated_at:
+    updated_at: 
       type: TIMESTAMP
