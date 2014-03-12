@@ -70,7 +70,9 @@ create_product:
 # default rules
 homepage:
   url:   /
-  param: { module: cyber, action: list }
+  param: { module: product, action: list }
+  requirements:
+    category: cyber
 
 default_symfony:
   url:   /symfony/:action/*

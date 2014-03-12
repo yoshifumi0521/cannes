@@ -36,15 +36,16 @@ class productActions extends sfActions
     public function executeList()
     {
         //カテゴリーを取り出す。
+        $category_key = 1;
+        $this->category = "cyber";
         foreach ( $this->yml_prize_category as $key => $value)
         {
             if($value == $this->getRequestParameter('category'))
             {
                 $category_key = $key;
+                $this->category = $this->getRequestParameter('category');
             }
         }
-
-        $this->category = $this->getRequestParameter('category');
 
         //取り出す。
         $c = new Criteria();
