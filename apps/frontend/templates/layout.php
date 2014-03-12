@@ -25,7 +25,7 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <?php echo link_to("チュパカブラのカンヌ研究室","@product_category_list?category=cyber",array("class"=> "brand brand-bootbus")); ?>
+                <?php echo link_to("チュパカブラのカンヌ研究室","@homepage",array("class"=> "brand brand-bootbus")); ?>
                 <!-- Below button used for responsive navigation -->
                 <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                   <span class="icon-bar"></span>
@@ -61,110 +61,115 @@
 <!-- Start: MAIN CONTENT -->
 <div class="content">
     <!-- Start: slider -->
-    <!-- div class="slider">
-        <div class="container-fluid">
-            <div id="heroSlider" class="carousel slide">
-                <div class="carousel-inner">
+    <?php if($module_name == "top" && $action_name == "index"): ?>
+        <div class="slider">
+            <div class="container-fluid">
+                <!-- <div id="heroSlider" class="carousel slide"> -->
+                    <!-- <div class="carousel-inner"> -->
 
-                    <div class="active item">
-                        <div class="hero-unit">
-                            <div class="row-fluid">
-                                <div class="span7 marketting-info">
-                                    <h1>
-                                        TELL ABOUT YOUR BUSINESS AND CORPORATE.
-                                    </h1>
-                                    <p>
-                                        We are Bootbusiness and we are awesome.We solve your technology problems by our awesome products.
-                                        We are Bootbusiness and we are awesome.We solve your technology problems by our awesome products.
-                                    </p>
-                                    <h3>
-                                        <a href="product.html" class="btn">Learn more</a>
-                                    </h3>
-                                </div>
-                                <div class="span5">
-                                    <img src="img/placeholder.jpg" class="thumbnail">
+                        <div class="active item">
+                            <div class="hero-unit">
+                                <div class="row-fluid">
+                                    <div class="span7 marketting-info">
+                                        <h1>
+                                            カンヌ研究ブログ
+                                        </h1>
+                                        <p>
+                                            Cyber部門、Film部門、Press部門を中心に研究していく予定。<br>
+                                            ヤングカンヌの日本代表に選ばれるのが目標。
+                                        </p>
+                                    </div>
+                                    <div class="span5">
+                                        <!-- <img src="img/placeholder.jpg" class="thumbnail"> -->
+                                        <?php echo image_tag("/img/cannes-lions-logo.png",array("class"=>"thumbnail")); ?>
+                                    </div>
+                                    <!-- <div class="span10 ">
+                                        aaa
+
+
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="item">
-                        <div class="hero-unit">
-                            <div class="row-fluid">
-                                <div class="span7 marketting-info">
-                                    <h1>
-                                        TELL ABOUT YOUR NATURE OF WORK
-                                    </h1>
-                                    <p>
-                                        We are Bootbusiness and we design ultimate website applications.
-                                        We are Bootbusiness and we design ultimate website applications.
-                                    </p>
-                                    <h3>
-                                        <a href="service.html" class="btn">Learn more</a>
-                                    </h3>
-                                </div>
-                                <div class="span5">
-                                    <img src="img/placeholder.jpg" class="thumbnail">
+                        <!-- <div class="item">
+                            <div class="hero-unit">
+                                <div class="row-fluid">
+                                    <div class="span7 marketting-info">
+                                        <h1>
+                                            TELL ABOUT YOUR NATURE OF WORK
+                                        </h1>
+                                        <p>
+                                            We are Bootbusiness and we design ultimate website applications.
+                                            We are Bootbusiness and we design ultimate website applications.
+                                        </p>
+                                        <h3>
+                                            <a href="service.html" class="btn">Learn more</a>
+                                        </h3>
+                                    </div>
+                                    <div class="span5">
+                                        <img src="img/placeholder.jpg" class="thumbnail">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
 
-                    <div class="item">
-                        <div class="hero-unit">
-                            <div class="row-fluid">
-                                <div class="span7 marketting-info">
-                                    <h1>
-                                        TELL ABOUT YOUR PRODUCT
-                                    </h1>
-                                    <p>
-                                        Get excited about our products.We build awesome products in mobile.
-                                        We build awesome products in mobile.We build awesome products in mobile.
-                                    </p>
-                                    <h3>
-                                        <a href="#" class="btn btn-primary">
-                                            Buy now
-                                        </a>
-                                        <a href="product.html" class="btn">Learn more</a>
-                                    </h3>
-                                </div>
-                                <div class="span5">
-                                    <img src="img/placeholder.jpg" class="thumbnail">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="hero-unit">
-                            <div class="row-fluid">
-                                <div class="span7 marketting-info">
-                                    <h1>
-                                        TELL ABOUT YOUR ANOTHER PRODUCT
-                                    </h1>
-                                    <p>
-                                        Get excited about our products.We build awesome products in mobile.
-                                        We build awesome products in mobile.We build awesome products in mobile.
-                                    </p>
-                                    <h3>
-                                        <a href="#" class="btn btn-primary">Buy now</a>
-                                        <a href="product.html" class="btn">Learn more</a>
-                                    </h3>
-                                </div>
-                                <div class="span5">
-                                    <img src="img/placeholder.jpg" class="thumbnail">
+                        <!-- <div class="item">
+                            <div class="hero-unit">
+                                <div class="row-fluid">
+                                    <div class="span7 marketting-info">
+                                        <h1>
+                                            TELL ABOUT YOUR PRODUCT
+                                        </h1>
+                                        <p>
+                                            Get excited about our products.We build awesome products in mobile.
+                                            We build awesome products in mobile.We build awesome products in mobile.
+                                        </p>
+                                        <h3>
+                                            <a href="#" class="btn btn-primary">
+                                                Buy now
+                                            </a>
+                                            <a href="product.html" class="btn">Learn more</a>
+                                        </h3>
+                                    </div>
+                                    <div class="span5">
+                                        <img src="img/placeholder.jpg" class="thumbnail">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="hero-unit">
+                                <div class="row-fluid">
+                                    <div class="span7 marketting-info">
+                                        <h1>
+                                            TELL ABOUT YOUR ANOTHER PRODUCT
+                                        </h1>
+                                        <p>
+                                            Get excited about our products.We build awesome products in mobile.
+                                            We build awesome products in mobile.We build awesome products in mobile.
+                                        </p>
+                                        <h3>
+                                            <a href="#" class="btn btn-primary">Buy now</a>
+                                            <a href="product.html" class="btn">Learn more</a>
+                                        </h3>
+                                    </div>
+                                    <div class="span5">
+                                        <img src="img/placeholder.jpg" class="thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
 
 
 
-                    </div>
-                        <a class="left carousel-control" href="#heroSlider" data-slide="prev">‹</a>
-                        <a class="right carousel-control" href="#heroSlider" data-slide="next">›</a>
-                    </div>
+                        <!-- </div>
+                            <a class="left carousel-control" href="#heroSlider" data-slide="prev">‹</a>
+                            <a class="right carousel-control" href="#heroSlider" data-slide="next">›</a>
+                        </div> -->
+                </div>
             </div>
-        </div> -->
+        <?php endif; ?>
         <!-- End: slider -->
 
 

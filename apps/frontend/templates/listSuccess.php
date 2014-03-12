@@ -21,6 +21,7 @@ div {
         <?php echo link_to ('Add+', '@create_product?category='.$category) ?>
     <?php endif; ?>
   <?php endif; ?>
+
 </div>
 
 <?php if(!$products): ?>

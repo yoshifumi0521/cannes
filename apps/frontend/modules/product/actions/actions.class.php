@@ -52,7 +52,7 @@ class productActions extends sfActions
         $c->add(ProductPeer::PRIZE_CATEGORY,$category_key);
         $this->products = ProductPeer::doSelect($c);
 
-
+        return $this->setTemplate(sfConfig::get('sf_app_dir')."/templates/list");
     }
 
     public function executeShow()

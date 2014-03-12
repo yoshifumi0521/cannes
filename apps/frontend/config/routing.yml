@@ -19,60 +19,11 @@ create_product:
   url:   /create/:category
   param: { module: product, action: create }
 
-# cyber:
-#   url:   /cyber/:cyber_id
-#   param: { module: cyber, action: show }
-
-# update_cyber:
-#   url:   /update/cyber
-#   param: { module: cyber, action: update }
-
-# create_cyber:
-#   url:   /create/cyber
-#   param: { module: cyber, action: create }
-
-
-# film_list:
-#   url:   /film/list
-#   param: { module: film, action: list }
-
-# film:
-#   url:   /film/:film_id
-#   param: { module: film, action: show }
-
-# update_film:
-#   url:   /update/film
-#   param: { module: film, action: update }
-
-# create_film:
-#   url:   /create/film
-#   param: { module: film, action: create }
-
-
-# press_list:
-#   url:   /press/list
-#   param: { module: press, action: list }
-
-# press:
-#   url:   /press/:press_id
-#   param: { module: press, action: show }
-
-# update_press:
-#   url:   /update/press
-#   param: { module: press, action: update }
-
-# create_press:
-#   url:   /create/press
-#   param: { module: press, action: create }
-
-
-
 # default rules
 homepage:
   url:   /
-  param: { module: product, action: list }
-  requirements:
-    category: cyber
+  param: { module: top, action: index }
+
 
 default_symfony:
   url:   /symfony/:action/*
