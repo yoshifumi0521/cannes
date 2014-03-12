@@ -27,8 +27,7 @@ propel:
     prize_year: 
       type: INTEGER
     prize_detail: 
-      type: VARCHAR
-      size: 100
+      type: INTEGER
     tag: 
       type: VARCHAR
       size: 255
@@ -83,8 +82,7 @@ propel:
     prize_year: 
       type: INTEGER
     prize_detail: 
-      type: VARCHAR
-      size: 100
+      type: INTEGER
     tag: 
       type: VARCHAR
       size: 255
@@ -137,8 +135,7 @@ propel:
     prize_year: 
       type: INTEGER
     prize_detail: 
-      type: VARCHAR
-      size: 100
+      type: INTEGER
     tag: 
       type: VARCHAR
       size: 255
