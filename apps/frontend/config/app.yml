@@ -11,3 +11,38 @@ all:
       l:
         x: 1060
         y: 550
+  cannes_prize:
+    type:
+      0: not available
+      1: cannes
+      2: young lions
+    category:
+      0: not available
+      1: cyber
+      2: film
+      3: press
+    detail:
+      0: not available
+      1: gold
+      2: silver
+      3: bronze
+      4: shortlist
+  cannes_tag:
+    type:
+      1: banner
+      2: SmartPhoneApplication
+      # 2:
+      # 1:
+      #   en:
+      #   ja:
+      # 2:
+      #   en:
+      #   ja:
+      # 3:
+      #   en:
+      #   ja:
+      # 4:
+      #   en:
+      #   ja:
+
+

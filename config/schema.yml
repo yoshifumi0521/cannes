@@ -2,7 +2,7 @@
 propel: 
   _attributes: 
     package: lib.model
-  cyber: 
+  product: 
     _attributes: 
       idMethod: native
     id: 
@@ -26,6 +26,8 @@ propel:
       type: INTEGER
     prize_year: 
       type: INTEGER
+    prize_category: 
+      type: INTEGER
     prize_detail: 
       type: INTEGER
     tag: 
@@ -36,119 +38,14 @@ propel:
     image: 
       type: VARCHAR
       size: 255
+    youtube_link: 
+      type: VARCHAR
+      size: 255
+    youtube_tag: 
+      type: LONGVARCHAR
     swf_file: 
       type: VARCHAR
       size: 255
-    summary: 
-      type: VARCHAR
-      size: 255
-    body: 
-      type: LONGVARCHAR
-    impression: 
-      type: LONGVARCHAR
-    memo: 
-      type: LONGVARCHAR
-    display: 
-      type: INTEGER
-      default: 1
-    created_at: 
-      type: TIMESTAMP
-    updated_at: 
-      type: TIMESTAMP
-  film: 
-    _attributes: 
-      idMethod: native
-    id: 
-      type: INTEGER
-      required: true
-      autoIncrement: true
-      primaryKey: true
-    title: 
-      type: VARCHAR
-      size: 100
-    client: 
-      type: VARCHAR
-      size: 100
-    agency: 
-      type: VARCHAR
-      size: 100
-    url: 
-      type: LONGVARCHAR
-    prize: 
-      type: VARCHAR
-      size: 100
-    prize_type: 
-      type: INTEGER
-    prize_year: 
-      type: INTEGER
-    prize_detail: 
-      type: INTEGER
-    tag: 
-      type: VARCHAR
-      size: 255
-    image: 
-      type: VARCHAR
-      size: 255
-    youtube_link: 
-      type: VARCHAR
-      size: 255
-    youtube_tag: 
-      type: LONGVARCHAR
-    summary: 
-      type: VARCHAR
-      size: 255
-    body: 
-      type: LONGVARCHAR
-    impression: 
-      type: LONGVARCHAR
-    memo: 
-      type: LONGVARCHAR
-    display: 
-      type: INTEGER
-      default: 1
-    created_at: 
-      type: TIMESTAMP
-    updated_at: 
-      type: TIMESTAMP
-  press: 
-    _attributes: 
-      idMethod: native
-    id: 
-      type: INTEGER
-      required: true
-      autoIncrement: true
-      primaryKey: true
-    title: 
-      type: VARCHAR
-      size: 100
-    client: 
-      type: VARCHAR
-      size: 100
-    agency: 
-      type: VARCHAR
-      size: 100
-    prize: 
-      type: VARCHAR
-      size: 100
-    prize_type: 
-      type: INTEGER
-    prize_year: 
-      type: INTEGER
-    prize_detail: 
-      type: INTEGER
-    tag: 
-      type: VARCHAR
-      size: 255
-    url: 
-      type: LONGVARCHAR
-    image: 
-      type: VARCHAR
-      size: 255
-    youtube_link: 
-      type: VARCHAR
-      size: 255
-    youtube_tag: 
-      type: LONGVARCHAR
     summary: 
       type: VARCHAR
       size: 255

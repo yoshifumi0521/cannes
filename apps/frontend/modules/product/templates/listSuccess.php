@@ -15,19 +15,19 @@ div {
 </style>
 
 <div class="page-header">
-  <h2>CYBER</h2>
+  <h2><?php echo strtoupper($category); ?></h2>
   <?php if(SF_DEBUG): ?>
-    <?php echo link_to ('Add+', '@create_cyber') ?>
+    <?php echo link_to ('Add+', '@create_product?category='.$category) ?>
   <?php endif; ?>
 </div>
 
-<?php if(!$cybers): ?>
+<?php if(!$products): ?>
 
     <p>まだ何も登録していません。</p>
 
 <?php else: ?>
 
-    <?php foreach ($cybers as $key => $cyber): ?>
+    <?php foreach ($products as $key => $product): ?>
         <?php if($key % 3 == 0): ?>
             <div class="row-fluid">
                 <ul class="thumbnails">
@@ -35,18 +35,21 @@ div {
 
             <li class="span4 item">
                 <div class="thumbnail">
-                    <?php echo $cyber->getImageTag('s','a',array('width'=>'260px','height'=>'150px')); ?>
+                    <?php echo $product->getImageTag('s','a',array('width'=>'260px','height'=>'150px')); ?>
                     <div class="caption">
-                        <h3><?php echo $cyber->__toString(); ?></h3>
+                        <h3><?php echo $product->__toString(); ?></h3>
                         <p>
-                            <?php echo mb_truncate_text($cyber->getSummary(),"48"); ?>
+                            <?php echo mb_truncate_text($product->getSummary(),"48"); ?>
+                        </p>
+                        <p>
+                            <strong><?php echo $product->getPrizeText(); ?></strong>
                         </p>
                     </div>
                     <div class="widget-footer">
                         <p>
                             &nbsp;
                             <!-- <a href="product.html" class="btn">Read more</a> -->
-                            <?php echo link_to("Read more","@cyber?cyber_id=".$cyber->getId()); ?>
+                            <?php echo link_to("Read more","@product?product_id=".$product->getId()); ?>
                         </p>
                     </div>
                 </div>

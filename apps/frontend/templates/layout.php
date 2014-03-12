@@ -25,7 +25,7 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <?php echo link_to("チュパカブラのカンヌ研究室","@cyber_list",array("class"=> "brand brand-bootbus")); ?>
+                <?php echo link_to("チュパカブラのカンヌ研究室","@product_category_list?category=cyber",array("class"=> "brand brand-bootbus")); ?>
                 <!-- Below button used for responsive navigation -->
                 <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                   <span class="icon-bar"></span>
@@ -36,13 +36,13 @@
                 <div class="nav-collapse collapse">
                     <ul class="nav pull-left">
                         <li>
-                            <?php echo link_to("CYBER","@cyber_list"); ?>
+                            <?php echo link_to("CYBER","@product_category_list?category=cyber"); ?>
                         </li>
                         <li>
-                            <?php echo link_to("FILM","@film_list"); ?>
+                            <?php echo link_to("FILM","@product_category_list?category=film"); ?>
                         </li>
                         <li>
-                            <?php echo link_to("PRESS","@press_list"); ?>
+                            <?php echo link_to("PRESS","@product_category_list?category=press"); ?>
                         </li>
 
                     <!-- <li><a href="contact_us.html">Contact us</a></li> -->

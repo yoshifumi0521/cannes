@@ -12,7 +12,4 @@ sfPropelBehavior::registerHooks('paranoid', array(
   'Peer:addDoSelectRS' => array('sfPropelParanoidBehavior', 'doSelectRS'),
 ));
 
-
-sfPropelBehavior::add('Cyber', array('paranoid'));
-sfPropelBehavior::add('Film', array('paranoid'));
-sfPropelBehavior::add('Press', array('paranoid'));
+sfPropelBehavior::add('Product', array('paranoid'));
