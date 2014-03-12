@@ -268,13 +268,8 @@
 
     <br>
     <!-- Start: FOOTER -->
-    <footer>
-      <div class="container">
-        <p>
-            <!-- tyuparakubura -->
-        </p>
-      </div>
-    </footer>
+    <?php include_partial('global/footer'); ?>
+
     <!-- End: FOOTER -->
     <?php use_javascript('bootstrap.min.js') ?>
     <?php use_javascript('boot-business.js') ?>

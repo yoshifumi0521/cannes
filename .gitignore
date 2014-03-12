@@ -14,3 +14,4 @@ lib/model/om/*
 lib/model/map/*
 web/*Plugin/*
 web/.htaccess
+config/custom.yml
