@@ -42,7 +42,15 @@ class Product extends BaseProduct
         //賞のカテゴリー。cyber or fim
         $yml_prize_category = sfConfig::get('app_cannes_prize_category');
 
-        return $this->getPrizeYear()." ".ucwords($yml_prize_type[$this->getPrizeType()])." ".ucwords($yml_prize_detail[$this->getPrizeDetail()]);
+        if($this->getPrizeYear() && $this->getPrizeType() && $this->getPrizeDetail())
+        {
+            return $this->getPrizeYear()." ".ucwords($yml_prize_type[$this->getPrizeType()])." ".ucwords($yml_prize_detail[$this->getPrizeDetail()]);
+        }
+        else
+        {
+            return null;
+        }
+
     }
 
 
