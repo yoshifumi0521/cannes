@@ -72,6 +72,8 @@ class productActions extends sfActions
         $this->forward404Unless($this->product);
         $this->category = $this->yml_prize_category[$this->product->getPrizeCategory()];
 
+        $domain = sfContext::getInstance()->getRequest()->getUriPrefix() . sfContext::getInstance()->getRequest()->getRelativeUrlRoot();
+        $this->image_link = $domain.$this->product->getImageTagPath("l");
 
     }
 

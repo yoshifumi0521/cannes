@@ -39,7 +39,7 @@ class Product extends BaseProduct
         $image_json = json_decode($this->getImage(), true);
         if(!empty($image_json['image_'.$place]))
         {
-            return sfConfig::get('sf_upload_dir_name')."/product/{$size}/image_{$id}{$place}.jpg";
+            return "/".sfConfig::get('sf_upload_dir_name')."/product/{$size}/image_{$id}{$place}.jpg";
         }
         else
         {

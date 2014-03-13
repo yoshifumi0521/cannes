@@ -7,10 +7,10 @@
 <head>
     <meta name="og:site_name" content="MapsTD" />
     <meta name="og:url" content="http://cannes.tyupakabura.com/" />
-    <meta name="og:image" content="<?php $product->getImageTagPath("m") ?>"/>
+    <meta name="og:image" content='<?php echo $image_link ?>'/>
     <meta name="og:type" content="website" />
-    <meta name="og:title" content="<?php $product->getTitle() ?>" />
-    <meta name="og:description" content="<?php $product->getSummary() ?>"/>
+    <meta name="og:title" content="<?php echo $product->getTitle() ?>" />
+    <meta name="og:description" content="<?php echo $product->getSummary() ?>"/>
 </head>
 
 <div class="page-header">
