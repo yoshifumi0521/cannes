@@ -2,6 +2,8 @@
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
   _gaq.push(['_setAccount','<?php echo $custom["core"]["ga_id"]; ?>']);
   _gaq.push(['_setDomainName', '<?php echo $custom["core"]["domain"]; ?>']);
   _gaq.push(['_trackPageview']);

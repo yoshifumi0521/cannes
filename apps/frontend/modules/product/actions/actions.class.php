@@ -36,20 +36,31 @@ class productActions extends sfActions
     public function executeList()
     {
         //カテゴリーを取り出す。
-        $category_key = 1;
+        $this->category_key = 1;
         $this->category = "cyber";
         foreach ( $this->yml_prize_category as $key => $value)
         {
             if($value == $this->getRequestParameter('category'))
             {
-                $category_key = $key;
+                $this->category_key = $key;
                 $this->category = $this->getRequestParameter('category');
             }
         }
 
         //取り出す。
+        $this->filters = $this->getRequestParameter('filters');
         $c = new Criteria();
-        $c->add(ProductPeer::PRIZE_CATEGORY,$category_key);
+        if($this->filters)
+        {
+            foreach ($this->filters as $key => $value)
+            {
+                if($value)
+                {
+                    $c->add("product.{$key}", "{$value}", Criteria::LIKE);
+                }
+            }
+        }
+        $c->add(ProductPeer::PRIZE_CATEGORY,$this->category_key);
         $this->products = ProductPeer::doSelect($c);
 
         return $this->setTemplate(sfConfig::get('sf_app_dir')."/templates/list");

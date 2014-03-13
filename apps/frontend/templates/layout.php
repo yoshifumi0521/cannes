@@ -61,7 +61,7 @@
 <!-- Start: MAIN CONTENT -->
 <div class="content">
     <!-- Start: slider -->
-    <?php if($module_name == "top" && $action_name == "index"): ?>
+    <?php if($module_name == "top" && $action_name == "list"): ?>
         <div class="slider">
             <div class="container-fluid">
                 <!-- <div id="heroSlider" class="carousel slide"> -->

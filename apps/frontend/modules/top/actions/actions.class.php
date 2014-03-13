@@ -17,22 +17,33 @@ class topActions extends sfActions
     public function preExecute()
     {
         // //カンヌかヤングカンヌかどうか
-        // $this->yml_prize_type = sfConfig::get('app_cannes_prize_type');
-        // //賞の種類
-        // $this->yml_prize_detail = sfConfig::get('app_cannes_prize_detail');
-        // //賞のカテゴリー。cyber or fim
-        // $this->yml_prize_category = sfConfig::get('app_cannes_prize_category');
-        // //賞のタグ
-        // $this->yml_tag = sfConfig::get('app_cannes_tag_type');
+        $this->yml_prize_type = sfConfig::get('app_cannes_prize_type');
+        //賞の種類
+        $this->yml_prize_detail = sfConfig::get('app_cannes_prize_detail');
+        //賞のカテゴリー。cyber or fim
+        $this->yml_prize_category = sfConfig::get('app_cannes_prize_category');
+        //賞のタグ
+        $this->yml_tag = sfConfig::get('app_cannes_tag_type');
 
         $context = sfContext::getInstance();
         $this->module_name = $context->getModuleName();
         $this->action_name = $context->getActionName();
     }
 
-    public function executeIndex()
+    public function executeList()
     {
+        $this->filters = $this->getRequestParameter('filters');
         $c = new Criteria();
+        if($this->filters)
+        {
+            foreach ($this->filters as $key => $value)
+            {
+                if($value)
+                {
+                    $c->add("product.{$key}", "{$value}", Criteria::LIKE);
+                }
+            }
+        }
         $this->products = ProductPeer::doSelect($c);
 
         return $this->setTemplate(sfConfig::get('sf_app_dir')."/templates/list");

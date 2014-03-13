@@ -22,7 +22,7 @@ create_product:
 # default rules
 homepage:
   url:   /
-  param: { module: top, action: index }
+  param: { module: top, action: list }
 
 
 default_symfony:
