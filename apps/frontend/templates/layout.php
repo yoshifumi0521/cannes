@@ -6,6 +6,12 @@
     <meta name="description" content="Bootbusiness | Short description about company">
     <meta name="author" content="Your name">
     <title>チュパカブラのカンヌ研究室</title>
+    <meta name="og:site_name" content="MapsTD" />
+    <meta name="og:url" content="http://cannes.tyupakabura.com/" />
+    <meta name="og:image" content="http://cannes.tyupakabura.com/img/cannes-lions-logo.png"/>
+    <meta name="og:type" content="website" />
+    <meta name="og:title" content="チュカパブラのカンヌ研究室" />
+    <meta name="og:description" content="Cyber部門、Film部門、Press部門を中心に研究していく予定。"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <!-- Bootstrap -->
     <?php use_stylesheet('bootstrap.min.css') ?>
@@ -76,7 +82,7 @@
                                         </h1>
                                         <p>
                                             Cyber部門、Film部門、Press部門を中心に研究していく予定。<br>
-                                            ヤングカンヌの日本代表に選ばれるのが目標。
+                                            <!-- ヤングカンヌの日本代表に選ばれるのが目標。 -->
                                         </p>
                                     </div>
                                     <div class="span5">

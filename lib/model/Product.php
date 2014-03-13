@@ -32,6 +32,22 @@ class Product extends BaseProduct
         }
     }
 
+    public function getImageTagPath($size='s', $place='a', $options='')
+    {
+        $id = $this->getId();
+        // $image_name = 'image_'.$id.$place;
+        $image_json = json_decode($this->getImage(), true);
+        if(!empty($image_json['image_'.$place]))
+        {
+            return sfConfig::get('sf_upload_dir_name')."/product/{$size}/image_{$id}{$place}.jpg";
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+
     //画像のパスを取得
     public function getPrizeText()
     {
