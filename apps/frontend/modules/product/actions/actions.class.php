@@ -161,6 +161,17 @@ class productActions extends sfActions
           }
         }
         $product->setImage(json_encode($image_json));
+
+        //SWFファイルを保存する。
+        $swf_json = $product->getSwfFile()?json_decode($product->getSwfFile(),true): array();
+        if($this->getRequest()->getFilePath('swf'))
+        {
+          $swf_name = 'swf_'.$product->getId()."a";
+          $this->getRequest()->moveFile('swf', sfConfig::get('sf_upload_dir').'/product/swf/'.$swf_name.".swf");
+          $swf_json["swf"] = $swf_name;
+        }
+        $product->setSwfFile(json_encode($swf_json));
+
         $product->save();
 
         return $this->redirect('@product?product_id='.$product->getId());
