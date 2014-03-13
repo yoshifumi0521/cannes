@@ -64,6 +64,7 @@ div {
             //検索をかける
             function search()
             {
+                var domain = location.protocol+"//"+location.hostname;
                 var prize_category = $("#prize_category").val();
                 var prize_type = $("#prize_type").val();
                 var prize_year = $("#prize_year").val() == ""? 0: $("#prize_year").val();
@@ -71,13 +72,13 @@ div {
 
                 if("<?php echo SF_DEBUG; ?>")
                 {
-                    var link = "/frontend_dev.php/";
+                    var path = "/frontend_dev.php/";
                 }
                 else
                 {
-                    var link = "";
+                    var path = "/";
                 }
-                var link = link+ "top/list?filters%5Bprize_category%5D="+prize_category+"&filters%5Bprize_type%5D="+prize_type+
+                var link = domain+path+"top/list?filters%5Bprize_category%5D="+prize_category+"&filters%5Bprize_type%5D="+prize_type+
                 "&filters%5Bprize_year%5D="+prize_year+"&filters%5Bprize_detail%5D="+prize_detail;
                 return $(location).attr("href", link);
 
@@ -120,6 +121,7 @@ div {
             //検索をかける
             function search()
             {
+                var domain = location.protocol+"//"+location.hostname;
                 var prize_category = $("#prize_category").val();
                 var prize_type = $("#prize_type").val();
                 var prize_year = $("#prize_year").val() == ""? 0: $("#prize_year").val();
@@ -127,13 +129,13 @@ div {
 
                 if("<?php echo SF_DEBUG; ?>")
                 {
-                    var link = "/frontend_dev.php/";
+                    var path = "/frontend_dev.php/";
                 }
                 else
                 {
-                    var link = "";
+                    var path = "";
                 }
-                var link = link+ "list/<?php echo $category; ?>?filters%5Bprize_category%5D="+prize_category+"&filters%5Bprize_type%5D="+prize_type+
+                var link = domain+path+ "list/<?php echo $category; ?>?filters%5Bprize_category%5D="+prize_category+"&filters%5Bprize_type%5D="+prize_type+
                 "&filters%5Bprize_year%5D="+prize_year+"&filters%5Bprize_detail%5D="+prize_detail;
                 return $(location).attr("href", link);
 
