@@ -5,6 +5,10 @@
   _gaq.push(['_setAccount','<?php echo $custom["core"]["ga_id"]; ?>']);
   _gaq.push(['_setDomainName', '<?php echo $custom["core"]["domain"]; ?>']);
   _gaq.push(['_trackPageview']);
+  var d = new Date();
+  var dow = ['1.Sunday','2.Monday','3.Tuesday','4.Wednesday','5.Thursday','6.Friday','7.Saturday'];
+  _gaq.push(['_setCustomVar', 1,'dayofweek',dow[d.getDay()],2]);
+  _gaq.push(['_trackPageview']);
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
