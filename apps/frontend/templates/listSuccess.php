@@ -133,7 +133,7 @@ div {
                 }
                 else
                 {
-                    var path = "";
+                    var path = "/";
                 }
                 var link = domain+path+ "list/<?php echo $category; ?>?filters%5Bprize_category%5D="+prize_category+"&filters%5Bprize_type%5D="+prize_type+
                 "&filters%5Bprize_year%5D="+prize_year+"&filters%5Bprize_detail%5D="+prize_detail;
